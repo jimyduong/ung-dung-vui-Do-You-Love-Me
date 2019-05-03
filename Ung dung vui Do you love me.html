@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me</title>
+</head>
+<body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .khung {
+        width: 400px;
+        height: auto;
+        margin: 100px;
+        padding: 10px;
+        border: 1px solid #666;
+        border-radius: 0px;
+    }
+    .botton button {
+        width: center;
+        height: 50px;
+        margin-top: 50px;
+        font-size: 0px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button.yes {
+        background-color: #ff0000;
+        width: 60px;
+        height: 40px;
+        font-size: 20px;
+    }
+    button.no {
+        background-color: #7f7f7f;
+        width: 60px;
+        height: 40px;
+        font-size: 20px;
+    }
+</style>
+<div class="khung">
+
+    <h1>DO YOU LOVE ME?</h1>
+    <br>
+    <div class="button"></div>
+    <button onclick="yes()" class="yes">Yes</button>
+    <button onmouseover="no()" id="no" class="no">No</button>
+</div>
+</div>
+<script>
+    function yes() {
+        alert("Me too!!! <3")
+    }
+
+    function no() {
+        let No = document.getElementById("no");
+        No.style.position = 'relative';
+        No.style.left = '0px';
+        No.style.bottom = '0px';
+
+        No.style.left = parseInt(No.style.left) + Math.floor(Math.random() * 690) + 'px';
+        No.style.right = parseInt(No.style.right) - Math.floor(Math.random() * 830) + 'px';
+        No.style.top = parseInt(No.style.top) + Math.floor(Math.random() * 760) + 'px';
+        No.style.bottom = parseInt(No.style.bottom) - Math.floor(Math.random() * 450) + 'px';
+
+    }
+</script>
+</body>
+</html>
